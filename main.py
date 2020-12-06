@@ -1,12 +1,11 @@
 from pm import Pm
 from st import St
 from pt import Pt
+import sys
 
 if (__name__ == "__main__"):
-    initName = input("Init file name? ")
-    inputName = input("Input file name? ")
-    initFile = open(initName, 'r')
-    inputFile = open(inputName, 'r')
+    initFile = open(sys.argv[1], 'r')
+    inputFile = open(sys.argv[2], 'r')
     outputFile = open('output-dp.txt', 'w')
 
     pm = Pm()
